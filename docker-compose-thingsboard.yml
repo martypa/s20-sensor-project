@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  thingsboard:
+    image: thingsboard/tb-postgres
+    container_name: thingsboard
+    ports:
+      - "8090:9090"
+      - "1883:1883"
+      - "5683:5683"
+    restart: always
+    volumes:
+      - "./mytb-data:/data"
+      - "./mytb-logs:/var/log/thingsboard"
+    network_mode: host
