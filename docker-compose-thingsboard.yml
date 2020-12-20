@@ -11,4 +11,3 @@ services:
     volumes:
       - "./mytb-data:/data"
       - "./mytb-logs:/var/log/thingsboard"
-    network_mode: host
